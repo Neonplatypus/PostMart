@@ -46,7 +46,7 @@
             android:name=".activities.PaymentDetailsActivity"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/SdkTheme">
+            android:theme="@style/Theme.FestivalPosterMaker">
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
@@ -56,7 +56,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.PaymentActivity"
+            android:name="com.PosterMaster.Posters.payment.CashfreeActivity"
             android:exported="true"
             android:hardwareAccelerated="true"
             android:label="Payment"

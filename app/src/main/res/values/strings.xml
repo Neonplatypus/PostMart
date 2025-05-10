@@ -139,6 +139,7 @@
     <string name="enter_bussiness_name">Please enter business name</string>
     <string name="edit_bussiness">Edit Business</string>
     <string name="my_bussiness">My Business</string>
+    <string name="search_hint">Search posters, stickers, and more...</string>
     <string name="add_new">Add New</string>
     <string name="your_all_added_bussiness">Your all added business</string>
     <string name="please_select_bussiness_logo">Please select business logo</string>
