@@ -42,6 +42,7 @@
     <string name="festival_category">Festival Category</string>
     <string name="bussiness_category">Business Category</string>
     <string name="search_your_query">Search your query</string>
+    <string name="search_hint">Search posters, stickers, and more...</string>
     <string name="my_post">My Post</string>
     <string name="share_us">Share Us</string>
     <string name="rate_us">Rate us</string>
@@ -139,7 +140,6 @@
     <string name="enter_bussiness_name">Please enter business name</string>
     <string name="edit_bussiness">Edit Business</string>
     <string name="my_bussiness">My Business</string>
-    <string name="search_hint">Search posters, stickers, and more...</string>
     <string name="add_new">Add New</string>
     <string name="your_all_added_bussiness">Your all added business</string>
     <string name="please_select_bussiness_logo">Please select business logo</string>

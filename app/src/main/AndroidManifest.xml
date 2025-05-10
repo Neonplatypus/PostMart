@@ -62,7 +62,11 @@
             android:label="Payment"
             android:screenOrientation="portrait"
             android:theme="@style/SdkTheme"
-            android:windowSoftInputMode="adjustResize" />
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name="com.PosterMaster.Posters.CustomTamplateActivity"
             android:exported="false">
@@ -133,13 +137,6 @@
         </activity>
         <activity
             android:name="com.PosterMaster.Posters.PersonalActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="com.PosterMaster.Posters.payment.CashfreeActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
