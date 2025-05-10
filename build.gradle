@@ -1,0 +1,28 @@
+buildscript {
+    ext.kotlin_version = '1.9.0' // Use the latest Kotlin version or update it if needed
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.3.1' // Use the latest stable version of Android Gradle Plugin
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.google.gms:google-services:4.4.1' // Google services plugin
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.9' // Firebase Crashlytics plugin
+
+        // Uncomment if you use OneSignal
+        // classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.14.0, 0.99.99]'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://s3-ap-southeast-1.amazonaws.com/godel-release/godel/" } // Required for Instamojo
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
