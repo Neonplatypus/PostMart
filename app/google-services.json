@@ -7,20 +7,12 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1003922832733:android:ddb82abc8cb418561cfcb4",
+        "mobilesdk_app_id": "1:1003922832733:android:78784df0df2fdfa91cfcb4",
         "android_client_info": {
-          "package_name": "com.PostMaster.Posters"
+          "package_name": "com.PosterMaster.Posters"
         }
       },
       "oauth_client": [
-        {
-          "client_id": "1003922832733-jah18mq8e3emtt6vqk1kksjpq47b482c.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.PostMaster.Posters",
-            "certificate_hash": "ed5127add1c6d00ac991dd39b10e127511290eb3"
-          }
-        },
         {
           "client_id": "1003922832733-r0825nogsu20d2c1m09eqf3b4o09i920.apps.googleusercontent.com",
           "client_type": 3

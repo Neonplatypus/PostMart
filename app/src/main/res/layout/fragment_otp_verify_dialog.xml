@@ -67,7 +67,7 @@
         </LinearLayout>
 
 
-        <com.otpview.OTPTextView
+        <com.mukesh.OtpView
             android:layout_gravity="center"
             android:id="@+id/otpView"
             android:layout_width="wrap_content"

@@ -38,7 +38,12 @@ public class JuspaySafeBrowser extends JuspayBrowserFragment {
         setupJuspayBackButtonCallbackInterface(new JuspayBackButtonCallback() {
             @Override
             public void transactionCancelled(JSONObject jsonObject) throws JSONException {
-                ((PaymentActivity) getActivity()).returnResult(Activity.RESULT_CANCELED);
+                Activity activity = getActivity();
+                if (activity instanceof PaymentActivity) {
+                    ((PaymentActivity) activity).returnResult(Activity.RESULT_CANCELED);
+                } else {
+                    Logger.e(TAG, "Activity is not a PaymentActivity");
+                }
             }
         });
         getWebView().addJavascriptInterface(new JavaScriptInterface(getActivity()), "AndroidScriptInterface");

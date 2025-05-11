@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
-    android:soundEffectsEnabled="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- This is my XML file -->
+
     <data>
+        <import type="com.PosterMaster.Posters.model.BusinessCardModel"/>
         <variable
             name="businessCard"
             type="com.PosterMaster.Posters.model.BusinessCardModel" />
@@ -17,6 +19,7 @@
         app:cardCornerRadius="8dp"
         android:layout_width="@dimen/_120sdp"
         android:layout_height="@dimen/_180sdp">
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -27,8 +30,8 @@
                 android:src="@drawable/placeholder"
                 android:scaleType="centerCrop"
                 app:imageUrl="@{businessCard.thumb_url}"/>
-
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_margin="@dimen/_5sdp"
             android:id="@+id/premium_tag"
@@ -36,13 +39,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="@{businessCard.premium == '1' ? View.VISIBLE : View.GONE}">
-
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_centerInParent="true"
                 android:src="@drawable/ic_crown" />
-
         </RelativeLayout>
 
         <TextView

@@ -146,13 +146,13 @@
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:textColor="@color/textColor" />
 
-                        <app.minimize.com.seek_bar_compat.SeekBarCompat
+                        <com.google.android.material.slider.Slider
                             android:id="@+id/widthSeekBar"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"
                             android:maxHeight="300sp"
-                            app:progressColor="@color/app_color"
+                            app:trackColorActive="@color/app_color"
                             app:thumbColor="@color/app_color" />
 
                         <TextView
@@ -166,13 +166,13 @@
                             android:textAppearance="?android:attr/textAppearanceSmall"
                             android:textColor="@color/textColor" />
 
-                        <app.minimize.com.seek_bar_compat.SeekBarCompat
+                        <com.google.android.material.slider.Slider
                             android:id="@+id/offsetSeekBar"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"
                             android:maxHeight="300sp"
-                            app:progressColor="@color/app_color"
+                            app:trackColorActive="@color/app_color"
                             app:thumbColor="@color/app_color" />
                     </LinearLayout>
 

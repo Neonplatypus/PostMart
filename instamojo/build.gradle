@@ -1,4 +1,6 @@
-apply plugin: 'com.android.library'
+plugins {
+    id 'com.android.library'
+}
 
 ext {
     sdkVersion = '3.7.0'
@@ -7,13 +9,13 @@ ext {
 
 android {
     namespace 'com.instamojo.android'
-    compileSdkVersion 33
+    compileSdk 33
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 33
-        versionCode sdkVersionCode
-        versionName sdkVersion
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
         vectorDrawables.useSupportLibrary = true
         consumerProguardFiles 'proguard-rules.pro'
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
@@ -27,15 +29,14 @@ android {
             buildConfigField("String", "VERSION_NAME", "\"${defaultConfig.versionName}\"")
         }
         debug {
-            debuggable true
             buildConfigField("int", "VERSION_CODE", "${defaultConfig.versionCode}")
             buildConfigField("String", "VERSION_NAME", "\"${defaultConfig.versionName}\"")
         }
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     buildFeatures {

@@ -232,18 +232,27 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <com.asksira.loopingviewpager.LoopingViewPager
+                        <androidx.viewpager2.widget.ViewPager2
                             android:id="@+id/slider1Pager"
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
                             android:clipToPadding="false"
                             android:paddingHorizontal="@dimen/_8sdp"
-                            app:autoScroll="true"
-                            app:isInfinite="true"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:scrollInterval="5000" />
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.github.zhpanvip.viewpagerindicator.ViewPagerIndicator
+                            android:id="@+id/indicator1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/slider1Pager"
+                            app:vp_indicator_style="circle"
+                            app:vp_indicator_color="@color/app_color"
+                            app:vp_indicator_selected_color="@color/app_color"
+                            app:vp_indicator_size="8dp"
+                            app:vp_indicator_selected_size="8dp"
+                            app:vp_indicator_margin="4dp" />
 
                     </RelativeLayout>
 
@@ -474,21 +483,30 @@
                         android:layout_height="wrap_content"
                         android:paddingVertical="@dimen/_4sdp">
 
-                        <com.asksira.loopingviewpager.LoopingViewPager
+                        <androidx.viewpager2.widget.ViewPager2
                             android:id="@+id/slider2Pager"
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
                             android:clipToPadding="false"
                             android:paddingHorizontal="@dimen/_8sdp"
                             android:paddingVertical="@dimen/_8sdp"
-                            app:autoScroll="true"
-                            app:isInfinite="true"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:scrollInterval="5000" />
+                            app:layout_constraintTop_toTopOf="parent" />
 
                     </RelativeLayout>
+
+                    <com.github.zhpanvip.viewpagerindicator.ViewPagerIndicator
+                        android:id="@+id/indicator2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/slider2Pager"
+                        app:vp_indicator_style="circle"
+                        app:vp_indicator_color="@color/app_color"
+                        app:vp_indicator_selected_color="@color/app_color"
+                        app:vp_indicator_size="8dp"
+                        app:vp_indicator_selected_size="8dp"
+                        app:vp_indicator_margin="4dp" />
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:layoutAnimation="@anim/rc_animation"
@@ -505,21 +523,30 @@
                         android:layout_height="wrap_content"
                         android:paddingVertical="@dimen/_4sdp">
 
-                        <com.asksira.loopingviewpager.LoopingViewPager
+                        <androidx.viewpager2.widget.ViewPager2
                             android:id="@+id/slider3Pager"
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
                             android:clipToPadding="false"
                             android:paddingHorizontal="@dimen/_8sdp"
                             android:paddingVertical="@dimen/_8sdp"
-                            app:autoScroll="true"
-                            app:isInfinite="true"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:scrollInterval="5000" />
+                            app:layout_constraintTop_toTopOf="parent" />
 
                     </RelativeLayout>
+
+                    <com.github.zhpanvip.viewpagerindicator.ViewPagerIndicator
+                        android:id="@+id/indicator3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/slider3Pager"
+                        app:vp_indicator_style="circle"
+                        app:vp_indicator_color="@color/app_color"
+                        app:vp_indicator_selected_color="@color/app_color"
+                        app:vp_indicator_size="8dp"
+                        app:vp_indicator_selected_size="8dp"
+                        app:vp_indicator_margin="4dp" />
 
                     <LinearLayout
                         android:layoutAnimation="@anim/rc_animation"

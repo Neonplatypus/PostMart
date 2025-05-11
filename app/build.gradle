@@ -1,10 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt' // Moved before crashlytics to avoid circular dependency
+    id 'kotlin-kapt'
     id 'com.google.gms.google-services'
     id 'com.google.firebase.crashlytics'
-    // id 'com.onesignal.androidsdk.onesignal-gradle-plugin' // Uncomment if using
 }
 
 android {
@@ -13,7 +12,7 @@ android {
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.PostMaster.Posters"
+        applicationId "com.PosterMaster.Posters"
         minSdk 24
         targetSdk 33
         versionCode 300
@@ -44,14 +43,13 @@ android {
         viewBinding true
     }
 
+    dataBinding {
+        enabledForTests = true
+    }
+
     lint {
         abortOnError false
     }
-
-    /*firebaseCrashlytics {
-        // Prevent crash mapping conflict in debug builds
-        mappingFileUploadEnabled false
-    }*/
 }
 
 dependencies {
@@ -60,21 +58,49 @@ dependencies {
     implementation 'com.google.android.material:material:1.11.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
+    // Data Binding
+    implementation 'androidx.databinding:databinding-runtime:8.2.2'
+
+    // CircleImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    // Material SeekBar (replaces SeekBarCompat)
+    implementation 'com.google.android.material:material:1.11.0'
+
+    // ViewPager2 with AutoScroll (replaces DiscreteScrollView and LoopingViewPager)
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    implementation 'com.github.zhpanvip:viewpagerindicator:1.2.1'
+
+    // OTP View
+    implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.1.2'
+
+    // Progress Bar
+    implementation 'com.github.rahatarmanahmed:circularprogressview:2.5.0'
+
     // Optional UI support
     implementation 'androidx.recyclerview:recyclerview:1.3.2'
     implementation 'androidx.cardview:cardview:1.0.0'
 
-    // Glide or image loading
+    // Glide for image loading
     implementation 'com.github.bumptech.glide:glide:4.16.0'
     kapt 'com.github.bumptech.glide:compiler:4.16.0'
 
-    // Firebase (if used)
+    // Firebase
     implementation platform('com.google.firebase:firebase-bom:32.7.1')
     implementation 'com.google.firebase:firebase-messaging'
     implementation 'com.google.firebase:firebase-analytics'
 
-    // uCrop (if used)
+    // uCrop
     implementation 'com.github.yalantis:ucrop:2.2.6'
+
+    // Lottie for animations
+    implementation 'com.airbnb.android:lottie:6.1.0'
+
+    // ExoPlayer for video playback
+    implementation 'com.google.android.exoplayer:exoplayer:2.19.1'
+
+    // Shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

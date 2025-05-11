@@ -1,14 +1,21 @@
-apply plugin: 'com.android.library'
+plugins {
+    id 'com.android.library'
+}
 
 group = 'yellowcath'
 
 android {
-    namespace 'com.yourcompany.movie' // Replace with correct package
-    compileSdkVersion 33
+    namespace 'com.hw.photomovie'
+    compileSdk 33
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 33
+        minSdk 17
+        targetSdk 33
+    }
+
+    lint {
+        abortOnError false
+        baseline = file("lint-baseline.xml")
     }
 
     buildTypes {
@@ -16,6 +23,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 }
 

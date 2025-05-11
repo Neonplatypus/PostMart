@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.2.2" type="baseline" client="gradle" dependencies="false" name="AGP (8.2.2)" variant="all" version="8.2.2">
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        errorLine1="            MLog.w(TAG, String.format(&quot;texture is too large: %d x %d&quot;,"
+        errorLine2="                        ^">
+        <location
+            file="src/main/java/com/hw/photomovie/opengl/BasicTexture.java"
+            line="70"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="InlinedApi"
+        message="Field requires API level 21 (current min is 18): `android.media.MediaFormat#MIMETYPE_AUDIO_AAC`"
+        errorLine1="        MediaFormat encodeFormat = MediaFormat.createAudioFormat(MediaFormat.MIMETYPE_AUDIO_AAC, sampleRate, oriChannelCount);"
+        errorLine2="                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/hw/photomovie/record/AudioRecordThread.java"
+            line="174"
+            column="66"/>
+    </issue>
+
+    <issue
+        id="InlinedApi"
+        message="Field requires API level 21 (current min is 18): `android.media.MediaFormat#MIMETYPE_AUDIO_AAC`"
+        errorLine1="        MediaCodec encoder = MediaCodec.createEncoderByType(MediaFormat.MIMETYPE_AUDIO_AAC);"
+        errorLine2="                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/hw/photomovie/record/AudioRecordThread.java"
+            line="357"
+            column="61"/>
+    </issue>
+
+    <issue
+        id="InlinedApi"
+        message="Field requires API level 21 (current min is 18): `android.media.MediaFormat#MIMETYPE_AUDIO_AAC`"
+        errorLine1="        MediaFormat encodeFormat = MediaFormat.createAudioFormat(MediaFormat.MIMETYPE_AUDIO_AAC, sampleRate, channelCount);//参数对应-> mime type、采样率、声道数"
+        errorLine2="                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/hw/photomovie/record/AudioRecordThread.java"
+            line="358"
+            column="66"/>
+    </issue>
+
+    <issue
+        id="InlinedApi"
+        message="Field requires API level 18 (current min is 17): `android.opengl.EGLExt#EGL_OPENGL_ES3_BIT_KHR`"
+        errorLine1="            renderableType |= EGLExt.EGL_OPENGL_ES3_BIT_KHR;"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/hw/photomovie/record/gles/EglCore.java"
+            line="147"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="InlinedApi"
+        message="Field requires API level 18 (current min is 17): `android.opengl.EGLExt#EGL_OPENGL_ES3_BIT_KHR`"
+        errorLine1="                newConfigSpec[len] = EGLExt.EGL_OPENGL_ES3_BIT_KHR; /* EGL_OPENGL_ES3_BIT_KHR */"
+        errorLine2="                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/hw/photomovie/render/GLTextureView.java"
+            line="816"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="InlinedApi"
+        message="Field requires API level 18 (current min is 17): `android.opengl.GLES30#GL_MAJOR_VERSION`"
+        errorLine1="            GLES30.glGetIntegerv(GLES30.GL_MAJOR_VERSION, values, 0);"
+        errorLine2="                                 ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/hw/photomovie/record/gles/GlUtil.java"
+            line="187"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="InlinedApi"
+        message="Field requires API level 18 (current min is 17): `android.opengl.GLES30#GL_MINOR_VERSION`"
+        errorLine1="            GLES30.glGetIntegerv(GLES30.GL_MINOR_VERSION, values, 0);"
+        errorLine2="                                 ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/hw/photomovie/record/gles/GlUtil.java"
+            line="189"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 18 (current min is 17): `android.opengl.EGLExt#eglPresentationTimeANDROID`"
+        errorLine1="        EGLExt.eglPresentationTimeANDROID(mEGLDisplay, eglSurface, nsecs);"
+        errorLine2="               ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/hw/photomovie/record/gles/EglCore.java"
+            line="314"
+            column="16"/>
+    </issue>
+
+    <issue
+        id="OldTargetApi"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details."
+        errorLine1="        targetSdk 33"
+        errorLine2="        ~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="13"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="PrivateApi"
+        message="Accessing internal APIs via reflection is not supported and may not work on all devices or in the future"
+        errorLine1="            Class&lt;?> c = Class.forName(&quot;android.os.SystemProperties&quot;);"
+        errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/hw/photomovie/util/SystemPropertiesUtil.java"
+            line="27"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="PrivateApi"
+        message="Accessing internal APIs via reflection is not supported and may not work on all devices or in the future"
+        errorLine1="            Class&lt;?> c = Class.forName(&quot;android.os.SystemProperties&quot;);"
+        errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/hw/photomovie/util/SystemPropertiesUtil.java"
+            line="59"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="WrongConstant"
+        message="Must be one or more of: MediaCodec.BUFFER_FLAG_SYNC_FRAME, MediaCodec.BUFFER_FLAG_KEY_FRAME, MediaCodec.BUFFER_FLAG_CODEC_CONFIG, MediaCodec.BUFFER_FLAG_END_OF_STREAM, MediaCodec.BUFFER_FLAG_PARTIAL_FRAME, but could be MediaExtractor.SAMPLE_FLAG_SYNC, MediaExtractor.SAMPLE_FLAG_ENCRYPTED, MediaExtractor.SAMPLE_FLAG_PARTIAL_FRAME"
+        errorLine1="            bufferInfo.flags = extractor.getSampleFlags();"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/hw/photomovie/record/AudioRecordThread.java"
+            line="132"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="WrongConstant"
+        message="Must be one or more of: MediaCodec.BUFFER_FLAG_SYNC_FRAME, MediaCodec.BUFFER_FLAG_KEY_FRAME, MediaCodec.BUFFER_FLAG_CODEC_CONFIG, MediaCodec.BUFFER_FLAG_END_OF_STREAM, MediaCodec.BUFFER_FLAG_PARTIAL_FRAME, but could be MediaExtractor.SAMPLE_FLAG_SYNC, MediaExtractor.SAMPLE_FLAG_ENCRYPTED, MediaExtractor.SAMPLE_FLAG_PARTIAL_FRAME"
+        errorLine1="                            info.flags = extractor.getSampleFlags();"
+        errorLine2="                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/hw/photomovie/record/AudioRecordThread.java"
+            line="290"
+            column="42"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/video_filter_eight.jpg` in densityless folder">
+        <location
+            file="src/main/res/drawable/video_filter_eight.jpg"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/video_filter_five.jpg` in densityless folder">
+        <location
+            file="src/main/res/drawable/video_filter_five.jpg"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/video_filter_four.jpg` in densityless folder">
+        <location
+            file="src/main/res/drawable/video_filter_four.jpg"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/video_filter_nine.jpg` in densityless folder">
+        <location
+            file="src/main/res/drawable/video_filter_nine.jpg"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/video_filter_one.jpg` in densityless folder">
+        <location
+            file="src/main/res/drawable/video_filter_one.jpg"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/video_filter_seven.jpg` in densityless folder">
+        <location
+            file="src/main/res/drawable/video_filter_seven.jpg"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/video_filter_six.jpg` in densityless folder">
+        <location
+            file="src/main/res/drawable/video_filter_six.jpg"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/video_filter_ten.jpg` in densityless folder">
+        <location
+            file="src/main/res/drawable/video_filter_ten.jpg"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/video_filter_three.jpg` in densityless folder">
+        <location
+            file="src/main/res/drawable/video_filter_three.jpg"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/video_filter_two.jpg` in densityless folder">
+        <location
+            file="src/main/res/drawable/video_filter_two.jpg"/>
+    </issue>
+
+</issues>

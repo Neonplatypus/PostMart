@@ -1,8 +1,22 @@
 package com.PosterMaster.Posters.model;
 
-public class BusinessCardModel {
+import androidx.databinding.BaseObservable;
+import androidx.databinding.Bindable;
+import com.PosterMaster.Posters.BR;
 
-    String  id, title, thumb_url, blade_name, premium, status, updated_at, created_at;
+public class BusinessCardModel extends BaseObservable {
+    private String id;
+    private String title;
+    private String thumb_url;
+    private String blade_name;
+    private String premium;
+    private String status;
+    private String updated_at;
+    private String created_at;
+
+    public BusinessCardModel() {
+        // Default constructor required for data binding
+    }
 
     public String getId() {
         return id;
@@ -10,6 +24,7 @@ public class BusinessCardModel {
 
     public void setId(String id) {
         this.id = id;
+        notifyPropertyChanged(BR.id);
     }
 
     public String getTitle() {
@@ -18,6 +33,7 @@ public class BusinessCardModel {
 
     public void setTitle(String title) {
         this.title = title;
+        notifyPropertyChanged(BR.title);
     }
 
     public String getThumb_url() {
@@ -26,6 +42,7 @@ public class BusinessCardModel {
 
     public void setThumb_url(String thumb_url) {
         this.thumb_url = thumb_url;
+        notifyPropertyChanged(BR.thumb_url);
     }
 
     public String getBlade_name() {
@@ -34,6 +51,7 @@ public class BusinessCardModel {
 
     public void setBlade_name(String blade_name) {
         this.blade_name = blade_name;
+        notifyPropertyChanged(BR.blade_name);
     }
 
     public String getPremium() {
@@ -42,6 +60,7 @@ public class BusinessCardModel {
 
     public void setPremium(String premium) {
         this.premium = premium;
+        notifyPropertyChanged(BR.premium);
     }
 
     public String getStatus() {
@@ -50,6 +69,7 @@ public class BusinessCardModel {
 
     public void setStatus(String status) {
         this.status = status;
+        notifyPropertyChanged(BR.status);
     }
 
     public String getUpdated_at() {
@@ -58,6 +78,7 @@ public class BusinessCardModel {
 
     public void setUpdated_at(String updated_at) {
         this.updated_at = updated_at;
+        notifyPropertyChanged(BR.updated_at);
     }
 
     public String getCreated_at() {
@@ -66,5 +87,6 @@ public class BusinessCardModel {
 
     public void setCreated_at(String created_at) {
         this.created_at = created_at;
+        notifyPropertyChanged(BR.created_at);
     }
 }
